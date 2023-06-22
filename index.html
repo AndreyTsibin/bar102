@@ -139,9 +139,49 @@
     </div>
   </header>
 
+  <!-- Фото -->
   <section class="main">
     <img src="assets/images/photo-section.jpg" alt="фото бара 102" class="main__photo">
   </section>
+
+  <!-- Афиша -->
+  <section class="afisha">
+    <h2 class="afisha__title">Афиша</h2>
+
+    <!-- Карточки анонсов -->
+    <div class="afisha__card wrapper">
+
+      <div class="image-container">
+        <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
+      </div>
+    </div>
+  </section>
+  <!-- Скрипт открывает карточку афиши на весь экран -->
+  <script>
+    const clickableImage = document.querySelector('.afisha__card-img');
+    const imageContainer = document.querySelector('.image-container');
+
+    clickableImage.addEventListener('click', () => {
+      const fullscreenImage = document.createElement('img');
+      fullscreenImage.src = clickableImage.src;
+      fullscreenImage.alt = clickableImage.alt;
+      fullscreenImage.classList.add('fullscreen-image');
+
+      fullscreenImage.addEventListener('click', () => {
+        fullscreenImage.classList.remove('open');
+        setTimeout(() => {
+          imageContainer.removeChild(fullscreenImage);
+        }, 300);
+      });
+
+      setTimeout(() => {
+        fullscreenImage.classList.add('open');
+      }, 0);
+
+      imageContainer.appendChild(fullscreenImage);
+    });
+
+  </script>
 </body>
 
 </html>
