@@ -31,6 +31,7 @@
   font-size: 16px;
   line-height: 1.2;
   color: #fff;
+  text-decoration: none;
 }
 .header {
   background-image: url(assets/images/headerbg.png);
@@ -69,7 +70,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   text-decoration: none;
   display: inline-block;
 }
@@ -147,4 +147,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding-bottom: 60px;
+}
+.header__address {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 5px 5px 10px #000000;
+}
+.header__time {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ff643a;
+  text-shadow: 5px 5px 10px #000000;
 }
