@@ -1,3 +1,27 @@
+@font-face {
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  src: url('assets/fonts/Montserrat-Bold.woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  src: url('assets/fonts/Montserrat-Medium.woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  src: url('assets/fonts/Montserrat-Regular.woff');
+  font-display: swap;
+}
 * {
   margin: 0px;
   padding: 0px;
