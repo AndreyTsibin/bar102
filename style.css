@@ -129,6 +129,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+}
+.header__button:hover {
+  transform: scale(1.05);
 }
 .header__button-phone {
   width: 240px;
@@ -147,6 +151,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+}
+.header__button-phone:hover {
+  transform: scale(1.05);
 }
 .header__bottom {
   display: flex;
@@ -174,4 +182,12 @@
   line-height: 22px;
   color: #ff643a;
   text-shadow: 5px 5px 10px #000000;
+}
+.header__social-link {
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
+}
+.header__social-link:hover {
+  transform: scale(1.1);
 }
