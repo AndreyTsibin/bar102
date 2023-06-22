@@ -43,11 +43,12 @@
   background-color: #292b2e;
 }
 .wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 0 auto;
   max-width: 1366px;
   min-height: 100%;
   position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .header__container-logo {
   display: flex;
