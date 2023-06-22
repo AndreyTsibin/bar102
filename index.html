@@ -353,28 +353,31 @@
 
   <!-- Скрипт открывает карточку афиши на весь экран -->
   <script>
-    const clickableImage = document.querySelector('.afisha__card-img');
+    const clickableImages = document.querySelectorAll('.afisha__card-img');
     const imageContainer = document.querySelector('.image-container');
 
-    clickableImage.addEventListener('click', () => {
-      const fullscreenImage = document.createElement('img');
-      fullscreenImage.src = clickableImage.src;
-      fullscreenImage.alt = clickableImage.alt;
-      fullscreenImage.classList.add('fullscreen-image');
+    clickableImages.forEach(clickableImage => {
+      clickableImage.addEventListener('click', () => {
+        const fullscreenImage = document.createElement('img');
+        fullscreenImage.src = clickableImage.src;
+        fullscreenImage.alt = clickableImage.alt;
+        fullscreenImage.classList.add('fullscreen-image');
 
-      fullscreenImage.addEventListener('click', () => {
-        fullscreenImage.classList.remove('open');
+        fullscreenImage.addEventListener('click', () => {
+          fullscreenImage.classList.remove('open');
+          setTimeout(() => {
+            imageContainer.removeChild(fullscreenImage);
+          }, 300);
+        });
+
         setTimeout(() => {
-          imageContainer.removeChild(fullscreenImage);
-        }, 300);
+          fullscreenImage.classList.add('open');
+        }, 0);
+
+        imageContainer.appendChild(fullscreenImage);
       });
-
-      setTimeout(() => {
-        fullscreenImage.classList.add('open');
-      }, 0);
-
-      imageContainer.appendChild(fullscreenImage);
     });
+
     // Плавный скролл к якарю
     document.addEventListener('DOMContentLoaded', function () {
       var button = document.querySelector('.header__button');
