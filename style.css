@@ -330,6 +330,25 @@
   object-position: center;
   border-radius: 10px;
 }
+.footer__copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+}
+.copyright {
+  color: #7c7c7c;
+}
+.copyright__link {
+  color: #7c7c7c;
+  transition: all 0.3s ease;
+}
+.copyright__link:hover {
+  color: #ff643a;
+}
 /* Адапитв для ноутбука */
 @media screen and (max-width: 1024px) {
   .wrapper {
@@ -452,6 +471,16 @@
     font-size: 12px;
     width: 150px;
   }
+  .footer__copyright {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .copyright__link {
+    text-align: center;
+  }
 }
 /* Адапитв для маленькая мобилки */
 @media screen and (max-width: 320px) {
@@ -521,11 +550,16 @@
   }
   .footer {
     padding-top: 50px;
+    padding-bottom: 10px;
   }
   .contact-wrapper {
     gap: 20px;
   }
   .map {
     height: 300px;
+  }
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
   }
 }

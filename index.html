@@ -349,6 +349,11 @@
 
       </div>
     </div>
+    <!-- Копирайт -->
+    <div class="footer__copyright wrapper">
+      <p class="copyright">© <span class="copyright" id="copyright">2022</span>. "102 dB" Все права защищены</p>
+      <a href="https://andreytsibin.ru/" class="copyright__link" target="_blank">Designed by AC</a>
+    </div>
   </footer>
 
   <!-- Скрипт открывает карточку афиши на весь экран -->
@@ -378,7 +383,7 @@
       });
     });
 
-    // Плавный скролл к якарю
+    // Плавный скролл к якорю
     document.addEventListener('DOMContentLoaded', function () {
       var button = document.querySelector('.header__button');
       var target = document.querySelector('#afisha');
@@ -396,6 +401,20 @@
         });
       });
     });
+  </script>
+  <!-- Меняем год на актуальный -->
+  <script>
+    // Получаем текущий год
+    var currentYear = new Date().getFullYear();
+
+    // Находим элемент с id "copyright"
+    var copyrightElement = document.getElementById("copyright");
+
+    // Проверяем, что элемент найден
+    if (copyrightElement) {
+      // Заменяем содержимое элемента на текущий год
+      copyrightElement.innerHTML = currentYear;
+    }
   </script>
 </body>
 
