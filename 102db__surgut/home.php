@@ -20,25 +20,29 @@ Template Name: home
         <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
       </div>
 
-      <div class="image-container">
-        <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
-      </div>
+<?php global $post;
 
-      <div class="image-container">
-        <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
-      </div>
+$myposts = get_posts([ 
+  'numberposts' => -1,
+    'category_name' => 'afisha',
+]);
 
-      <div class="image-container">
-        <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
-      </div>
+if( $myposts ){
+foreach( $myposts as $post ){
+  setup_postdata( $post ); ?>
 
-      <div class="image-container">
-        <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
-      </div>
+    <div class="image-container">
+    <img>
+      <?php the_post_thumbnail( 
+      full,
+      array('class' => 'afisha__card-img',) 
+      ); ?>
+    </img>
+  </div>
 
-      <div class="image-container">
-        <img src="assets/images/DhPjYCnFnoc.jpg" alt="концерт в 102 сургут" class="afisha__card-img">
-      </div>
+<?php } } 
+wp_reset_postdata(); ?>
+
     </div>
   </section>
 <?php get_footer();?>
